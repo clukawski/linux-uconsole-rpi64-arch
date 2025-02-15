@@ -5,3 +5,19 @@ Arch Linux PKGBUILD for Linux kernel version 6.13 on the [ClockworkPi uConsole](
 This repository contains the changes needed for the `axp20x` power and `ocp8178_bl` backlight drivers to build the 6.13 kernel (based off the patches included [in PotatoMania's kernel 6.6 linux-uconsole-rpi64 package](https://github.com/PotatoMania/uconsole-cm3/tree/dev/PKGBUILDs/linux-uconsole-rpi64()).
 
 Built for CM4, not tested on CM3 or CM4S.
+
+## How to Build
+
+This assumes you're building this on an `x86_64` version of Arch Linux. If you're building this on an `arm64` Arch Linux host, running `makepkg` should suffice.
+
+### Dependencies
+
+```
+pacman -S aarch64-linux-gnu-gcc aarch64-linux-gnu-binutils
+```
+
+### Build Package
+
+```
+makepkg CARCH=aarch64 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-
+```

@@ -1,0 +1,6 @@
+src/
+pkg/
+*.xz
+*.pkg.tar.zst
+linux
+rpi-6.13.y.zip

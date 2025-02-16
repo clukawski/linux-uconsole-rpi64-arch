@@ -4,7 +4,7 @@
 # Based off of the work by PotatoMania in https://github.com/PotatoMania/uconsole-cm3
 
 pkgbase=linux-uconsole-rpi64-arch
-pkgver=6.13.2+g8ca012c
+pkgver=6.13.2+gfdde528
 _desc="uConsole (CM4) kernel package using RPi's fork"
 
 _srcname="linux"

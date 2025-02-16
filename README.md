@@ -6,12 +6,19 @@ Arch Linux PKGBUILD for Linux kernel version 6.13 on the [ClockworkPi uConsole](
 
 This repository contains the changes needed for the `axp20x` power and `ocp8178_bl` backlight drivers to build the 6.13 kernel (based off the patches included [in PotatoMania's kernel 6.6 linux-uconsole-rpi64 package](https://github.com/PotatoMania/uconsole-cm3/tree/dev/PKGBUILDs/linux-uconsole-rpi64)).
 
-Built for CM4, not tested on CM3 or CM4S.
+Built and testing on a CM4 uConsole, do not have CM3 or CM4S hardware for validation.
 
 ## Known Issues
 
-- DSI display not properly initialized
+- DSI panel not properly initialized
+  - ```
+    [    8.971301] panel-clockwork-cwu50 fe700000.dsi.0: error -EBUSY: Failed to request GPIO (-16)
+    [    8.971325] panel-clockwork-cwu50 fe700000.dsi.0: probe with driver panel-clockwork-cwu50 failed with error -16
+	  ```
 - Potential issue with the asp20x driver + patches
+  - ```
+    [   21.474449] platform axp20x-battery-power-supply.2.auto: deferred probe pending: (reason unknown)
+    ```
 
 ## How to Build
 

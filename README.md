@@ -15,7 +15,8 @@ Built and testing on a CM4 uConsole, do not have CM3 or CM4S hardware for valida
     [    8.971301] panel-clockwork-cwu50 fe700000.dsi.0: error -EBUSY: Failed to request GPIO (-16)
     [    8.971325] panel-clockwork-cwu50 fe700000.dsi.0: probe with driver panel-clockwork-cwu50 failed with error -16
 	  ```
-- Potential issue with the asp20x driver + patches
+- Potential issue with the axp20x driver + patches
+  - No entry `/sys/class/power_supply/axp20x_battery/` in sysfs (expected) 
   - ```
     [   21.474449] platform axp20x-battery-power-supply.2.auto: deferred probe pending: (reason unknown)
     ```
